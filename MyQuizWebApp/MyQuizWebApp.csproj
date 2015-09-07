@@ -88,6 +88,16 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyQuiz.Model\MyQuiz.Model.csproj">
+      <Project>{44e6ea47-af09-4c35-811d-ecb786516061}</Project>
+      <Name>MyQuiz.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyQuiz.Repository\MyQuiz.Repository.csproj">
+      <Project>{1f0f080e-469d-40ad-b528-de703ba44d5e}</Project>
+      <Name>MyQuiz.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
