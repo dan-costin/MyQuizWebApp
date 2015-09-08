@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MyQuiz.Views.Site" %>
+
+<%@ Register Src="~/UserControls/HeaderUserControl.ascx" TagPrefix="userControl" TagName="HeaderUserControl" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>My Quiz</title>
+    <link href="../Styles/CommonStyleSheet.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="header" runat="server" />
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <div id="HeaderMenuBaseStyle">
+            <div id="HeaderMenuStyle">
+                <userControl:HeaderUserControl runat="server" ID="HeaderUserControl" />
+                <%--<asp:ContentPlaceHolder ID="HeaderMenuPlaceHolder" runat="server" />--%>
+            </div>
+        </div>
+
+        <div id="ContentBaseStyle">
+            <div id="ContentStyle">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" />
+            </div>
+        </div>
+
+        <div id="FooterBaseStyle">
+            <div id="FooterStyle">
+                <asp:ContentPlaceHolder ID="FooterPlaceHolder" runat="server" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

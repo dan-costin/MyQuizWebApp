@@ -1,0 +1,49 @@
+﻿body {
+    margin: 0;
+    margin-bottom:50px;
+	padding:0;
+	height:100%;
+}
+
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+
+#HeaderMenuBaseStyle {
+    padding: 15px;
+    background-color: #EFEDEE;
+    color: #3C3C3C;
+}
+
+#HeaderMenuStyle {
+    margin: auto;
+    width: 60%;
+}
+
+#ContentBaseStyle {
+    padding: 15px;
+}
+
+#ContentStyle {
+    margin: auto;
+    width: 60%;
+    color: #333333;
+}
+
+#FooterBaseStyle {
+    background:#333333;
+	position:fixed;
+    height:50px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:0px;
+    padding: 15px;
+}
+
+#FooterStyle {
+    margin: auto;
+    width: 60%;
+    color: white;
+}

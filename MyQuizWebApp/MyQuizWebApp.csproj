@@ -67,6 +67,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Styles\CommonStyleSheet.css" />
+    <Content Include="UserControls\HeaderUserControl.ascx" />
+    <Content Include="Views\LoginWebForm.aspx" />
+    <Content Include="Views\Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -83,10 +87,30 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\HeaderUserControl.ascx.cs">
+      <DependentUpon>HeaderUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\HeaderUserControl.ascx.designer.cs">
+      <DependentUpon>HeaderUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginWebForm.aspx.cs">
+      <DependentUpon>LoginWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\LoginWebForm.aspx.designer.cs">
+      <DependentUpon>LoginWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyQuiz.Model\MyQuiz.Model.csproj">
