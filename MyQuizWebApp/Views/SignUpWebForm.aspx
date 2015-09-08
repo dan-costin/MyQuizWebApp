@@ -2,6 +2,7 @@
 
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="header" runat="server">
     <link href="../Styles/SignUpStyleSheet.css" rel="stylesheet" />
+    <script src="../Scripts/SignUpScript.js"></script>
 </asp:Content>
 
 <asp:Content ID="Content" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
@@ -53,7 +54,7 @@
                 <asp:Label Text="By clicking on Create an account below, you are agreeing to the Terms of Service and the Privacy Policy.." runat="server" />
             </div>
 
-            <input type="button" id="createAccount" value="Create account" />
+            <input type="button" id="createAccount" value="Create account" onclick="signUpUser()" />
         </form>
     </div>
 </asp:Content>
