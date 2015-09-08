@@ -1,6 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MyQuiz.Views.Site" %>
 
 <%@ Register Src="~/UserControls/HeaderUserControl.ascx" TagPrefix="userControl" TagName="HeaderUserControl" %>
+<%@ Register Src="~/UserControls/LoginUserControl.ascx" TagPrefix="userControl" TagName="LoginUserControl" %>
+<%@ Register Src="~/UserControls/FooterUserControl.ascx" TagPrefix="userControl" TagName="FooterUserControl" %>
 
 <!DOCTYPE html>
 
@@ -8,28 +10,34 @@
 <head runat="server">
     <title>My Quiz</title>
     <link href="../Styles/CommonStyleSheet.css" rel="stylesheet" />
+    <script src="../Scripts/NavigationScripts.js"></script>
     <asp:ContentPlaceHolder ID="header" runat="server" />
 </head>
 <body>
 
     <div id="wrapper">
 
-        <div id="HeaderMenuBaseStyle">
-            <div id="HeaderMenuStyle">
+        <div id="headerMenuBaseStyle">
+            <div id="headerMenuStyle">
                 <userControl:HeaderUserControl runat="server" ID="HeaderUserControl" />
-                <%--<asp:ContentPlaceHolder ID="HeaderMenuPlaceHolder" runat="server" />--%>
             </div>
         </div>
 
-        <div id="ContentBaseStyle">
-            <div id="ContentStyle">
+        <div id="loginMenuBaseStyle">
+            <div id="loginMenuStyle">
+                <userControl:LoginUserControl runat="server" id="LoginUserControl" />
+            </div>
+        </div>
+
+        <div id="contentBaseStyle">
+            <div id="contentStyle">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" />
             </div>
         </div>
 
-        <div id="FooterBaseStyle">
-            <div id="FooterStyle">
-                <asp:ContentPlaceHolder ID="FooterPlaceHolder" runat="server" />
+        <div id="footerBaseStyle">
+            <div id="footerStyle">
+                <userControl:FooterUserControl runat="server" id="FooterUserControl" />
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 ﻿namespace MyQuiz.Repository.Interfaces
 {
-    public class IQuizRepository
+    public interface IQuizRepository
     {
     }
 }

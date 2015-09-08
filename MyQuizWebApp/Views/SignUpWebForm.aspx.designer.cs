@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyQuiz.UserControls {
+namespace MyQuiz.Views {
     
     
-    public partial class HeaderUserControl {
+    public partial class SignUpWebForm {
     }
 }
