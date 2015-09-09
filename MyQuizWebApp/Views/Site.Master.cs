@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace MyQuiz.Views
 {
@@ -11,7 +7,16 @@ namespace MyQuiz.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            HttpCookie myCookie = Request.Cookies["MyQuizCookie"];
+            if (myCookie == null)
+            {
+                return;
+            }
 
+            if (!string.IsNullOrEmpty(myCookie.Values["userid"]))
+            {
+                string userId = myCookie.Values["userid"].ToString();
+            }
         }
     }
 }

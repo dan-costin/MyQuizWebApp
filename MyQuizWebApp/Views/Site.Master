@@ -11,6 +11,7 @@
     <title>My Quiz</title>
     <link href="../Styles/CommonStyleSheet.css" rel="stylesheet" />
     <script src="../Scripts/NavigationScripts.js"></script>
+    <script src="../Scripts/Libs/jquery-1.11.3.min.js"></script>
     <asp:ContentPlaceHolder ID="header" runat="server" />
 </head>
 <body>

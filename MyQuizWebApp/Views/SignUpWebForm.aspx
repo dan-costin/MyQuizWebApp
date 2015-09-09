@@ -15,7 +15,7 @@
                 <asp:Label Text="Username" runat="server" />
             </div>
             <div class="inputText">
-                <asp:TextBox Width="500px" Height="20px" runat="server" />
+                <asp:TextBox ID="username" Width="500px" Height="20px" runat="server" />
             </div>
             <div class="descriptionText">
                 <asp:Label Text="This will be your username." runat="server" />
@@ -25,7 +25,7 @@
                 <asp:Label Text="Email Address" runat="server" />
             </div>
             <div class="inputText">
-                <asp:TextBox Width="500px" Height="20px" runat="server" />
+                <asp:TextBox ID="email" Width="500px" Height="20px" runat="server" />
             </div>
             <div class="descriptionText">
                 <asp:Label Text="You will occasionally receive account related emails." runat="server" />
@@ -35,7 +35,7 @@
                 <asp:Label Text="Password" runat="server" />
             </div>
             <div class="inputText">
-                <asp:TextBox Width="500px" Height="20px" runat="server" />
+                <asp:TextBox ID="password" Width="500px" Height="20px" runat="server" TextMode="Password"/>
             </div>
             <div class="descriptionText">
                 <asp:Label Text="Use at least one lowercase letter, one numeral, and seven characters." runat="server" />
@@ -45,7 +45,7 @@
                 <asp:Label Text="Confirm your password" runat="server" />
             </div>
             <div class="inputText">
-                <asp:TextBox Width="500px" Height="20px" runat="server" />
+                <asp:TextBox Width="500px" Height="20px" runat="server" TextMode="Password"/>
             </div>
 
             <br />
@@ -54,7 +54,7 @@
                 <asp:Label Text="By clicking on Create an account below, you are agreeing to the Terms of Service and the Privacy Policy.." runat="server" />
             </div>
 
-            <input type="button" id="createAccount" value="Create account" onclick="signUpUser()" />
+            <asp:Button OnClick="SignUpUser" Text="Create account" runat="server" CssClass="createAccount" />
         </form>
     </div>
 </asp:Content>

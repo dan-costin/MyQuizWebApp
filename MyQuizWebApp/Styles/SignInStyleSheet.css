@@ -1,13 +1,11 @@
-﻿body {
-}
-
-.fullrow {
-    width: 100%;
-}
-
-#pageTitle {
+﻿#pageTitle {
+    background-color: #829AA8;
+    color: white;
     font-family: 'Segoe UI';
-    font-size: 25px;
+    font-size: 21px;
+    padding: 3px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .headerText {
@@ -18,24 +16,12 @@
     font-weight: 500;
 }
 
-.descriptionText {
-    color: #767676;
-    width: 100%;
-    margin-top: 2px;
-    font-family: 'Segoe UI';
-    font-size: 13px;
-    width: 500px;
+#signInFormStyle {
+    padding: 10px;
+    border: 1px solid #D8DEE2;
 }
 
-.termsAndConditionsText {
-    width: 100%;
-    margin-top: 2px;
-    font-family: 'Segoe UI';
-    font-size: 14px;
-    width: 500px;
-}
-
-.createAccount {
+.signInButtonStyle {
     background-color: #83D566;
     color: white;
     border-width: 0px;
@@ -45,13 +31,12 @@
     font-weight: bold;
     height: 30px;
     border-radius: 5px;
-    width: 150px;
+    width: 100px;
     right: 0;
-    margin-left: 350px;
     margin-top: 30px;
 }
 
-    .createAccount:hover {
+    .signInButtonStyle:hover {
         background-color: #CCCCCC;
         color: #333333;
     }
