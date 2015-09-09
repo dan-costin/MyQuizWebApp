@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Linq;
 using MyQuiz.Model;
+using MyQuiz.Logger;
 
 namespace MyQuiz.Repository
 {
     public class UserRepository : RepositoryBase<MyQuizDbContext>, IUserRepository
     {
-        public UserRepository() : base()
-        { }
+        ILogger _Logger;
 
-        public bool SignUpUser(string username, string email, string password)
+        public UserRepository(ILogger logger) : base()
+        {
+            _Logger = logger;
+        }
+
+        public bool RegisterNewUser(string username, string email, string password)
         {
             using (var context = DataContext)
             {
@@ -26,14 +31,14 @@ namespace MyQuiz.Repository
                 }
                 catch (Exception ex)
                 {
-                    //log
+                    _Logger.LogException(ex, "RegisterNewUser");
                     return false;
                 }
             }
             return true;
         }
 
-        public int SignInUser(string username, string password)
+        public int LogInUser(string username, string password)
         {
             using (var context = DataContext)
             {
@@ -44,11 +49,10 @@ namespace MyQuiz.Repository
                 }
                 catch (Exception ex)
                 {
-                    //log
+                    _Logger.LogException(ex, "LogInUser");
                     return 0;
                 }
             }
-            return 0;
         }
 
         public User GetUser(int userId)
@@ -62,11 +66,10 @@ namespace MyQuiz.Repository
                 }
                 catch (Exception ex)
                 {
-                    //log
+                    _Logger.LogException(ex, "GetUser");
                     return null;
                 }
             }
-            return null;
         }
     }
 }

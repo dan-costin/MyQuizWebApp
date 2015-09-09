@@ -71,6 +71,10 @@
     <Compile Include="UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyQuiz.Logger\MyQuiz.Logger.csproj">
+      <Project>{f406a269-5b21-49a9-b591-0fb449c9640e}</Project>
+      <Name>MyQuiz.Logger</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyQuiz.Model\MyQuiz.Model.csproj">
       <Project>{44e6ea47-af09-4c35-811d-ecb786516061}</Project>
       <Name>MyQuiz.Model</Name>

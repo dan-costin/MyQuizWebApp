@@ -24,7 +24,7 @@ namespace MyQuiz.Views
 
         protected void SignUpUser(object sender, EventArgs e)
         {
-            _UserRepository.SignUpUser(username.Text, email.Text, password.Text);
+            _UserRepository.RegisterNewUser(username.Text, email.Text, password.Text);
         }
     }
 }

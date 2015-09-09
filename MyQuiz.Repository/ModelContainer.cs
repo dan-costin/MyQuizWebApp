@@ -21,6 +21,7 @@ namespace MyQuiz.Repository
             get
             {
                 _Instance.RegisterType<IUserRepository, UserRepository>(new HierarchicalLifetimeManager());
+                _Instance.RegisterType<Logger.ILogger, Logger.Logger>(new HierarchicalLifetimeManager());
                 //_Instance.RegisterType<ISecurityRepository, SecurityRepository>(new HierarchicalLifetimeManager());
                 //_Instance.RegisterType<IMarketsAndNewsRepository, MarketsAndNewsRepository>(new HierarchicalLifetimeManager());
                 return _Instance;

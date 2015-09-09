@@ -25,7 +25,7 @@ namespace MyQuiz.Views
 
         protected void SignInUserClick(object sender, EventArgs e)
         {
-            var result = _UserRepository.SignInUser(username.Text, password.Text);
+            var result = _UserRepository.LogInUser(username.Text, password.Text);
             AddCookie(result.ToString());
             Server.Transfer("HomeWebForm.aspx");
         }
