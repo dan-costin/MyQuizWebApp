@@ -26,7 +26,7 @@
 
         <div id="loginMenuBaseStyle">
             <div id="loginMenuStyle">
-                <userControl:LoginUserControl runat="server" id="LoginUserControl" />
+                <userControl:LoginUserControl runat="server" id="LoginUserControl"/>
             </div>
         </div>
 

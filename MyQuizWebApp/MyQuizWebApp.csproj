@@ -120,6 +120,7 @@
     <Content Include="UserControls\LoginUserControl.ascx" />
     <Content Include="Views\HomeWebForm.aspx" />
     <Content Include="Views\LoginWebForm.aspx" />
+    <Content Include="Views\SignOutWebForm.aspx" />
     <Content Include="Views\SignUpWebForm.aspx" />
     <Content Include="Views\Site.Master" />
     <None Include="Web.Debug.config">
@@ -173,6 +174,13 @@
     </Compile>
     <Compile Include="Views\LoginWebForm.aspx.designer.cs">
       <DependentUpon>LoginWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignOutWebForm.aspx.cs">
+      <DependentUpon>SignOutWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SignOutWebForm.aspx.designer.cs">
+      <DependentUpon>SignOutWebForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\SignUpWebForm.aspx.cs">
       <DependentUpon>SignUpWebForm.aspx</DependentUpon>

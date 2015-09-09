@@ -1,6 +1,6 @@
 ﻿using System;
-using MyQuiz.Repository;
 using System.Web;
+using MyQuiz.Repository;
 
 namespace MyQuiz.Views
 {
@@ -26,14 +26,22 @@ namespace MyQuiz.Views
         protected void SignInUserClick(object sender, EventArgs e)
         {
             var result = _UserRepository.SignInUser(username.Text, password.Text);
+            AddCookie(result.ToString());
+            Server.Transfer("HomeWebForm.aspx");
+        }
 
-            HttpCookie myCookie = new HttpCookie("MyQuizCookie");
+        private void AddCookie(string userId)
+        {
+            HttpCookie myCookie = Request.Cookies["MyQuizCookie"];
+            if (myCookie == null)
+            {
+                myCookie = new HttpCookie("MyQuizCookie");
+            }
 
-            myCookie.Values.Add("userid", result.ToString());
-
+            myCookie.Values.Clear();
+            myCookie.Values.Add("userid", userId);
             myCookie.Expires = DateTime.Now.AddHours(12);
-
-            Response.Cookies.Add(myCookie);
+            Response.AppendCookie(myCookie);
         }
     }
 }

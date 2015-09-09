@@ -50,5 +50,23 @@ namespace MyQuiz.Repository
             }
             return 0;
         }
+
+        public User GetUser(int userId)
+        {
+            using (var context = DataContext)
+            {
+                try
+                {
+                    var user = context.Users.Where(x => x.ID == userId).FirstOrDefault();
+                    return user;
+                }
+                catch (Exception ex)
+                {
+                    //log
+                    return null;
+                }
+            }
+            return null;
+        }
     }
 }
