@@ -6,6 +6,7 @@ namespace MyQuiz.Views
     public partial class SignUpWebForm : System.Web.UI.Page
     {
         IUserRepository _UserRepository;
+        private object registerForm;
 
         public SignUpWebForm(IUserRepository userRepository)
         {
@@ -25,5 +26,6 @@ namespace MyQuiz.Views
         {
             _UserRepository.RegisterNewUser(username.Text, email.Text, password.Text);
         }
+
     }
 }

@@ -107,6 +107,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\error.bmp" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
@@ -115,6 +116,7 @@
     <Content Include="Scripts\NavigationScripts.js" />
     <Content Include="Styles\CommonButtonsStyleSheet.css" />
     <Content Include="Styles\CommonStyleSheet.css" />
+    <Content Include="Styles\CreateQuizStyleSheet.css" />
     <Content Include="Styles\HeaderStyleSheet.css" />
     <Content Include="Styles\SignInStyleSheet.css" />
     <Content Include="Styles\SignUpStyleSheet.css" />
