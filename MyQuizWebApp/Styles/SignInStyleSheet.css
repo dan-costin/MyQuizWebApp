@@ -8,35 +8,7 @@
     border-top-right-radius: 5px;
 }
 
-.headerText {
-    width: 100%;
-    margin-top: 20px;
-    font-family: 'Segoe UI';
-    font-size: 16px;
-    font-weight: 500;
-}
-
 #signInFormStyle {
     padding: 10px;
     border: 1px solid #D8DEE2;
 }
-
-.signInButtonStyle {
-    background-color: #83D566;
-    color: white;
-    border-width: 0px;
-    padding-bottom: 10px;
-    font-family: 'Segoe UI';
-    font-size: 18px;
-    font-weight: bold;
-    height: 30px;
-    border-radius: 5px;
-    width: 100px;
-    right: 0;
-    margin-top: 30px;
-}
-
-    .signInButtonStyle:hover {
-        background-color: #CCCCCC;
-        color: #333333;
-    }

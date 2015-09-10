@@ -1,5 +1,5 @@
-﻿
-@import url('HeaderStyleSheet.css');
+﻿@import url('HeaderStyleSheet.css');
+@import url('CommonButtonsStyleSheet.css');
 
 body {
     margin: 0;
@@ -77,4 +77,18 @@ body {
     max-width: 1000px;
     min-width: 500px;
     color: white;
+}
+
+.defaultLabelStyle {
+    margin-top: 10px;
+    width: 100%;
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.defaultTextBoxStyle{
+    margin-top: 5px;
+    font-family: 'Segoe UI';
+    font-size: 16px;
 }

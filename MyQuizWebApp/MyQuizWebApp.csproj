@@ -108,9 +108,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\Libs\jquery-1.11.3.min.js" />
     <Content Include="Scripts\NavigationScripts.js" />
-    <Content Include="Scripts\SignUpScript.js" />
+    <Content Include="Styles\CommonButtonsStyleSheet.css" />
     <Content Include="Styles\CommonStyleSheet.css" />
     <Content Include="Styles\HeaderStyleSheet.css" />
     <Content Include="Styles\SignInStyleSheet.css" />
@@ -118,11 +121,13 @@
     <Content Include="UserControls\FooterUserControl.ascx" />
     <Content Include="UserControls\HeaderUserControl.ascx" />
     <Content Include="UserControls\LoginUserControl.ascx" />
+    <Content Include="Views\CreateQuizWebForm.aspx" />
     <Content Include="Views\HomeWebForm.aspx" />
     <Content Include="Views\LoginWebForm.aspx" />
     <Content Include="Views\SignOutWebForm.aspx" />
     <Content Include="Views\SignUpWebForm.aspx" />
     <Content Include="Views\Site.Master" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -160,6 +165,13 @@
     </Compile>
     <Compile Include="UserControls\LoginUserControl.ascx.designer.cs">
       <DependentUpon>LoginUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateQuizWebForm.aspx.cs">
+      <DependentUpon>CreateQuizWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CreateQuizWebForm.aspx.designer.cs">
+      <DependentUpon>CreateQuizWebForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\HomeWebForm.aspx.cs">
       <DependentUpon>HomeWebForm.aspx</DependentUpon>

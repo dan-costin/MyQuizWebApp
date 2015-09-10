@@ -20,7 +20,6 @@ namespace MyQuiz.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void SignInUserClick(object sender, EventArgs e)

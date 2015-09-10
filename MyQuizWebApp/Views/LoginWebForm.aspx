@@ -12,21 +12,24 @@
         </div>
         <div id="signInFormStyle">
             <form runat="server" style="display: grid">
-                <div class="headerText">
+
+                <div class="defaultLabelStyle">
                     <asp:Label Text="Username or Email" runat="server" />
                 </div>
-                <div class="inputText">
-                    <asp:TextBox ID="username" Width="90%" Height="20px" runat="server" />
+                <div class="defaultTextBoxStyle">
+                    <asp:TextBox ID="username" Width="90%" Height="20px" runat="server" Font-Names="Segoe UI" Font-Size="16px"/>
                 </div>
 
-                <div class="headerText">
+                <div class="defaultLabelStyle">
                     <asp:Label Text="Password" runat="server" />
                 </div>
-                <div class="inputText">
-                    <asp:TextBox ID="password" Width="90%" Height="20px" runat="server" TextMode="Password"/>
+                <div class="defaultTextBoxStyle">
+                    <asp:TextBox ID="password" Width="90%" Height="20px" runat="server" Font-Names="Segoe UI" Font-Size="16px" TextMode="Password" />
                 </div>
 
-                <asp:Button OnClick="SignInUserClick" Text="Sign in" runat="server" CssClass="signInButtonStyle" />
+                <div style="margin-top: 20px;">
+                    <asp:Button OnClick="SignInUserClick" Text="Sign in" runat="server" CssClass="greenButtonStyle" />
+                </div>
             </form>
         </div>
     </div>

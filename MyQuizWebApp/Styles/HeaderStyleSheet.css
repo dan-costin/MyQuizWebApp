@@ -30,38 +30,3 @@
                 background-color: #CCCCCC;
                 color: #333333;
             }
-
-#signUpButton {
-    background-color: #83D566;
-    color: white;
-    border-width: 0px;
-    font-family: 'Segoe UI';
-    font-size: 16px;
-    font-weight: bold;
-    height: 25px;
-    border-radius: 5px;
-    width: 80px;
-}
-
-#signInButton {
-    background-color: #F8F8F8;
-    color: #333333;
-    border-width: 0px;
-    font-family: 'Segoe UI';
-    font-size: 16px;
-    font-weight: bold;
-    height: 25px;
-    border-radius: 5px;
-    margin-left: 20px;
-    width: 80px;
-}
-
-#signUpButton:hover {
-    background-color: #CCCCCC;
-    color: #333333;
-}
-
-#signInButton:hover {
-    background-color: #CCCCCC;
-    color: #333333;
-}
