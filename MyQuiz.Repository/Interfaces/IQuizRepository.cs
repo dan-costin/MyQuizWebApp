@@ -7,5 +7,6 @@ namespace MyQuiz.Repository
     {
         void SaveQuiz(Quiz quiz);
         List<Quiz> GetAllQuizzes();
+        Quiz GetQuiz(int quizId);
     }
 }

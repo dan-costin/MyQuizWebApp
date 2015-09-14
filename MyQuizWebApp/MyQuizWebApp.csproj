@@ -131,6 +131,7 @@
     <Content Include="Styles\CreateQuizStyleSheet.css" />
     <Content Include="Styles\HeaderStyleSheet.css" />
     <Content Include="Styles\ListViewStyleSheet.css" />
+    <Content Include="Styles\QuizStyleSheet.css" />
     <Content Include="Styles\SignInStyleSheet.css" />
     <Content Include="Styles\SignUpStyleSheet.css" />
     <Content Include="UserControls\FooterUserControl.ascx" />
@@ -140,6 +141,7 @@
     <Content Include="Views\HomeWebForm.aspx" />
     <Content Include="Views\LoginWebForm.aspx" />
     <Content Include="Views\QuizListWebForm.aspx" />
+    <Content Include="Views\QuizWebForm.aspx" />
     <Content Include="Views\SignOutWebForm.aspx" />
     <Content Include="Views\SignUpWebForm.aspx" />
     <Content Include="Views\Site.Master" />
@@ -211,6 +213,13 @@
     </Compile>
     <Compile Include="Views\QuizListWebForm.aspx.designer.cs">
       <DependentUpon>QuizListWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuizWebForm.aspx.cs">
+      <DependentUpon>QuizWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\QuizWebForm.aspx.designer.cs">
+      <DependentUpon>QuizWebForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\SignOutWebForm.aspx.cs">
       <DependentUpon>SignOutWebForm.aspx</DependentUpon>
