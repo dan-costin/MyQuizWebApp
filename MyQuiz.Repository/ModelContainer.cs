@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyQuiz.Repository
 {
-    public static class ModelContainer
+    public static partial class ModelContainer
     {
         private static IUnityContainer _Instance;
 
@@ -20,6 +20,7 @@ namespace MyQuiz.Repository
         {
             get
             {
+                GetInstances();
                 _Instance.RegisterType<Logger.ILogger, Logger.Logger>(new HierarchicalLifetimeManager());
                 _Instance.RegisterType<IUserRepository, UserRepository>(new HierarchicalLifetimeManager());
                 _Instance.RegisterType<IQuizRepository, QuizRepository>(new HierarchicalLifetimeManager());
@@ -27,6 +28,11 @@ namespace MyQuiz.Repository
                 //_Instance.RegisterType<IMarketsAndNewsRepository, MarketsAndNewsRepository>(new HierarchicalLifetimeManager());
                 return _Instance;
             }
+        }
+
+        private static void GetInstances()
+        {
+
         }
 
         public static object Resolve(Type type)

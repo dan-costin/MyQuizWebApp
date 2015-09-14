@@ -16,7 +16,7 @@ namespace MyQuiz.Views
                 myCookie.Value = null;
                 Response.SetCookie(myCookie);
             }
-            Server.Transfer("HomeWebForm.aspx");
+            Response.Redirect("HomeWebForm.aspx");
         }
     }
 }

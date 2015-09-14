@@ -3,6 +3,7 @@
 <%@ Register Src="~/UserControls/HeaderUserControl.ascx" TagPrefix="userControl" TagName="HeaderUserControl" %>
 <%@ Register Src="~/UserControls/LoginUserControl.ascx" TagPrefix="userControl" TagName="LoginUserControl" %>
 <%@ Register Src="~/UserControls/FooterUserControl.ascx" TagPrefix="userControl" TagName="FooterUserControl" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 
 <!DOCTYPE html>
 

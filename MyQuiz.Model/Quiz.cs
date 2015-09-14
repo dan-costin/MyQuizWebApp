@@ -17,6 +17,8 @@ namespace MyQuiz.Model
         [Key]
         public int ID { get; set; }
         public string Name { get; set; }
+        public int NumberOfQuestions { get; set; }
+        public DateTime CreationDate { get; set; }
         public User Owner { get; set; }
         public ICollection<Question> Questions { get; set; }
     }

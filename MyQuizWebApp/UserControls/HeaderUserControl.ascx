@@ -8,7 +8,7 @@
         <ul id="menu">
             <li><a href="HomeWebForm.aspx">Home</a></li>
             <li><a href="HomeWebForm.aspx">Categories</a></li>
-            <li><a href="HomeWebForm.aspx">Products</a></li>
+            <li><a href="QuizListWebForm.aspx">Quizzes</a></li>
             <li><a href="HomeWebForm.aspx">About Us</a></li>
             <li><a href="HomeWebForm.aspx">Contact Us</a></li>
         </ul>

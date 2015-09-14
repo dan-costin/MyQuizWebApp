@@ -1,21 +1,24 @@
 ﻿using System;
 using MyQuiz.Repository;
+using MyQuiz.Services;
 
 namespace MyQuiz.Views
 {
     public partial class SignUpWebForm : System.Web.UI.Page
     {
         IUserRepository _UserRepository;
-        private object registerForm;
+        ILoginService _LoginService;
 
-        public SignUpWebForm(IUserRepository userRepository)
+        public SignUpWebForm(IUserRepository userRepository, ILoginService loginService)
         {
             _UserRepository = userRepository;
+            _LoginService = new LoginService(_UserRepository);
         }
 
         public SignUpWebForm()
         {
             _UserRepository = ModelContainer.Resolve<IUserRepository>();
+            _LoginService = new LoginService(_UserRepository);
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -24,7 +27,10 @@ namespace MyQuiz.Views
 
         protected void SignUpUser(object sender, EventArgs e)
         {
-            _UserRepository.RegisterNewUser(username.Text, email.Text, password.Text);
+            if (_UserRepository.RegisterNewUser(username.Text, email.Text, password.Text))
+            {
+                _LoginService.LoginUser(this.Request, this.Response, username.Text, password.Text);
+            }
         }
 
     }

@@ -76,11 +76,15 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -105,6 +109,13 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.UI, Version=2015.2.826.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q2 2015\Bin45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>C:\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q2 2015\Bin45\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\error.bmp" />
@@ -114,10 +125,12 @@
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\Libs\jquery-1.11.3.min.js" />
     <Content Include="Scripts\NavigationScripts.js" />
+    <Content Include="Scripts\QuizListScript.js" />
     <Content Include="Styles\CommonButtonsStyleSheet.css" />
     <Content Include="Styles\CommonStyleSheet.css" />
     <Content Include="Styles\CreateQuizStyleSheet.css" />
     <Content Include="Styles\HeaderStyleSheet.css" />
+    <Content Include="Styles\ListViewStyleSheet.css" />
     <Content Include="Styles\SignInStyleSheet.css" />
     <Content Include="Styles\SignUpStyleSheet.css" />
     <Content Include="UserControls\FooterUserControl.ascx" />
@@ -126,6 +139,7 @@
     <Content Include="Views\CreateQuizWebForm.aspx" />
     <Content Include="Views\HomeWebForm.aspx" />
     <Content Include="Views\LoginWebForm.aspx" />
+    <Content Include="Views\QuizListWebForm.aspx" />
     <Content Include="Views\SignOutWebForm.aspx" />
     <Content Include="Views\SignUpWebForm.aspx" />
     <Content Include="Views\Site.Master" />
@@ -147,6 +161,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ILoginService.cs" />
+    <Compile Include="Services\LoginService.cs" />
     <Compile Include="UserControls\FooterUserControl.ascx.cs">
       <DependentUpon>FooterUserControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -189,6 +205,13 @@
     <Compile Include="Views\LoginWebForm.aspx.designer.cs">
       <DependentUpon>LoginWebForm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\QuizListWebForm.aspx.cs">
+      <DependentUpon>QuizListWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\QuizListWebForm.aspx.designer.cs">
+      <DependentUpon>QuizListWebForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\SignOutWebForm.aspx.cs">
       <DependentUpon>SignOutWebForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -223,6 +246,9 @@
       <Project>{1f0f080e-469d-40ad-b528-de703ba44d5e}</Project>
       <Name>MyQuiz.Repository</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -21,7 +21,7 @@ namespace MyQuiz.Views
             if (viewStateQuestions != null)
             {
                 _Questions = viewStateQuestions;
-                if (_Questions.Count > 2)
+                if (_Questions.Count >= 2)
                 {
                     saveQuizButton.Visible = true;
                     saveQuizLabel.Visible = false;
@@ -39,11 +39,6 @@ namespace MyQuiz.Views
 
         protected void AddQuestionClicked(object sender, EventArgs e)
         {
-            if (!ValidateFields())
-            {
-                return;
-            }
-
             Question newQuestion = new Question();
             newQuestion.QuestionText = question.Text;
             newQuestion.Answer1 = answer1.Text;
@@ -65,8 +60,10 @@ namespace MyQuiz.Views
 
         protected void SaveQuizClicked(object sender, EventArgs e)
         {
-            Quiz quiz = new Quiz();
-            quiz.Name = "Test";
+            var quiz = new Quiz();
+            quiz.Name = quizName.Text;
+            quiz.NumberOfQuestions = _Questions.Count;
+            quiz.CreationDate = DateTime.Now;
             quiz.Questions = _Questions;
             quiz.Owner = GetUser();
 
@@ -78,11 +75,6 @@ namespace MyQuiz.Views
             }
 
             Server.Transfer("HomeWebForm.aspx");
-        }
-
-        private bool ValidateFields()
-        {
-            return true;
         }
 
         private void ClearFields()
