@@ -36,6 +36,6 @@
             </div>
         </div>
 
-        <asp:Button Text="Next Question" CssClass="greenButtonStyle" runat="server" Style="float: right; margin-top: 50px; margin-right:200px;"/>
+        <asp:Button Text="Next Question" CssClass="greenButtonStyle" runat="server" Style="float: right; margin-top: 50px; margin-right:200px;" OnClick="NextQuestionClicked"/>
     </form>
 </asp:Content>
