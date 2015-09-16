@@ -1,12 +1,15 @@
 ﻿using MyQuiz.Model;
-using System.Runtime.Serialization;
+using MyQuiz.Repository;
+using MyQuiz.UiEntities;
 
 namespace MyQuiz.Services
 {
     public interface IQuizService
     {
-        void SetQuiz(Quiz quiz);
-        Question GetNextQuestion();
-        void AnswerQuestion(bool question1, bool question2, bool question3, bool question4);
+        Answers Answer { get; set; }
+        QuestionWrapper NextQuestion { get; set; }
+        void SetQuiz(IQuizWrapper quizRepository, int quizId);
+        void GetNextQuestion();
+        void AnswerQuestion();
     }
 }

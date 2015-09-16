@@ -64,7 +64,6 @@
     <Compile Include="Interfaces\IQuizHistoryRepository.cs" />
     <Compile Include="Interfaces\IQuizRepository.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
-    <Compile Include="ModelContainer.cs" />
     <Compile Include="MyQuizDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuizRepository.cs" />

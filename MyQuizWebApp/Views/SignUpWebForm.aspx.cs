@@ -12,13 +12,13 @@ namespace MyQuiz.Views
         public SignUpWebForm(IUserRepository userRepository, ILoginService loginService)
         {
             _UserRepository = userRepository;
-            _LoginService = new LoginService(_UserRepository);
+            _LoginService = loginService;
         }
 
         public SignUpWebForm()
         {
             _UserRepository = ModelContainer.Resolve<IUserRepository>();
-            _LoginService = new LoginService(_UserRepository);
+            _LoginService = ModelContainer.Resolve<ILoginService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)

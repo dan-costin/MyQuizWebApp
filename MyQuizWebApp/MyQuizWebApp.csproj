@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Container\ModelContainer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -247,9 +248,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Container\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyQuiz.Logger\MyQuiz.Logger.csproj">
+      <Project>{f406a269-5b21-49a9-b591-0fb449c9640e}</Project>
+      <Name>MyQuiz.Logger</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyQuiz.Model\MyQuiz.Model.csproj">
       <Project>{44e6ea47-af09-4c35-811d-ecb786516061}</Project>
       <Name>MyQuiz.Model</Name>
@@ -257,6 +261,10 @@
     <ProjectReference Include="..\MyQuiz.Repository\MyQuiz.Repository.csproj">
       <Project>{1f0f080e-469d-40ad-b528-de703ba44d5e}</Project>
       <Name>MyQuiz.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyQuiz.UiEntities\MyQuiz.UiEntities.csproj">
+      <Project>{a2e8a13d-7f86-4a6e-8022-eeaae98b4405}</Project>
+      <Name>MyQuiz.UiEntities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

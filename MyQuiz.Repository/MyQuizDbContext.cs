@@ -1,4 +1,5 @@
 ﻿using MyQuiz.Model;
+using System;
 using System.Data.Entity;
 
 namespace MyQuiz.Repository

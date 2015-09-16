@@ -4,6 +4,7 @@ using System.Web;
 
 namespace MyQuiz.Logger
 {
+    [Serializable]
     public class Logger : ILogger
     {
         public Logger()

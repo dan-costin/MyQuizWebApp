@@ -10,16 +10,16 @@ namespace MyQuiz.Views
         IUserRepository _UserRepository;
         ILoginService _LoginService;
 
-        public LoginWebForm(IUserRepository userRepository)
+        public LoginWebForm(IUserRepository userRepository, ILoginService loginsService)
         {
             _UserRepository = userRepository;
-            _LoginService = new LoginService(_UserRepository);
+            _LoginService = loginsService;
         }
 
         public LoginWebForm()
         {
             _UserRepository = ModelContainer.Resolve<IUserRepository>();
-            _LoginService = new LoginService(_UserRepository);
+            _LoginService = ModelContainer.Resolve<ILoginService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)

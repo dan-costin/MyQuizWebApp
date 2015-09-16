@@ -1,42 +1,55 @@
 ﻿using System;
 using MyQuiz.Model;
+using MyQuiz.Repository;
 using System.Collections.Generic;
+using MyQuiz.UiEntities;
 
 namespace MyQuiz.Services
 {
     [Serializable]
     public class QuizService : IQuizService
     {
-        private Quiz _Quiz;
-        private Question currentQuestion;
-        private int questionIndex = 0;
-        private int points = 0;
+        public Answers Answer { get; set; }
+        public QuestionWrapper NextQuestion { get; set; }
 
-        public void SetQuiz(Quiz quiz)
+        //public IQuizWrapper QuizRepository { get; set; }
+        QuestionWrapper _previousQuestion;
+
+        Quiz _Quiz;
+        int questionIndex = 0;
+        int points = 0;
+
+        public QuizService()
         {
-            _Quiz = quiz;
+            Answer = new Answers();
         }
 
-        public Question GetNextQuestion()
+        public void SetQuiz(IQuizWrapper quizRepository, int quizId)
+        {
+            _Quiz = quizRepository.GetQuiz(quizId);
+        }
+
+        public void GetNextQuestion()
         {
             if (_Quiz == null || _Quiz.Questions == null)
             {
-                return null;
+                return;
             }
 
-            currentQuestion = GetItemAtIndex(_Quiz.Questions, questionIndex);
+            Question question = GetItemAtIndex(_Quiz.Questions, questionIndex);
+            NextQuestion = new QuestionWrapper(question);
             questionIndex++;
-
-            return currentQuestion;
         }
 
-        public void AnswerQuestion(bool question1, bool question2, bool question3, bool question4)
+        public void AnswerQuestion()
         {
-            if (currentQuestion.IsAnswer1Correct == question1 &&
-                currentQuestion.IsAnswer2Correct == question2 &&
-                currentQuestion.IsAnswer3Correct == question3 &&
-                currentQuestion.IsAnswer4Correct == question4)
+            Question question = GetItemAtIndex(_Quiz.Questions, questionIndex - 2);
+            if (question.IsAnswer1Correct == Answer.Answer1 &&
+                question.IsAnswer2Correct == Answer.Answer2 &&
+                question.IsAnswer3Correct == Answer.Answer3 &&
+                question.IsAnswer4Correct == Answer.Answer4)
                 points += 1;
+            Answer = new Answers();
         }
 
         private Question GetItemAtIndex(ICollection<Question> collection, int index)

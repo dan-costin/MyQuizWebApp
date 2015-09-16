@@ -1,20 +1,18 @@
-﻿using MyQuiz.Model;
-using MyQuiz.Repository;
+﻿using System;
 using MyQuiz.Services;
-using System;
-using System.Collections.Generic;
+using MyQuiz.Repository;
 
 namespace MyQuiz.Views
 {
     public partial class QuizWebForm : System.Web.UI.Page
     {
-        IQuizRepository _QuizRepository;
-        IQuizService _QuizService;
+        IQuizWrapper _QuizRepository;
+        public IQuizService QuizService { get; set; }
 
         public QuizWebForm()
         {
-            _QuizRepository = ModelContainer.Resolve<IQuizRepository>();
-            _QuizService = new QuizService();
+            _QuizRepository = ModelContainer.Resolve<IQuizWrapper>();
+            QuizService = ModelContainer.Resolve<IQuizService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -22,41 +20,28 @@ namespace MyQuiz.Views
             var quizId = Session["QuizId"];
             if (quizId != null)
             {
-                LoadQuestions((int)quizId);
+                QuizService.SetQuiz(_QuizRepository, (int)quizId);
+                Session.Remove("QuizId");
             }
             else
             {
-                _QuizService = (IQuizService)ViewState["QuizService"];
+                QuizService = (IQuizService)ViewState["QuizService"];
             }
-            LoadNextQuestion();
-            ViewState["QuizService"] = _QuizService;
-        }
 
-        private void LoadQuestions(int quizId)
-        {
-            Session.Remove("QuizId");
-            _QuizService.SetQuiz(_QuizRepository.GetQuiz(quizId));
+            LoadNextQuestion();
         }
 
         private void LoadNextQuestion()
         {
-            Question question = _QuizService.GetNextQuestion();
-
-            if (question == null)
-            {
-                return;
-            }
-
-            questionText.Text = question.QuestionText;
-            answer1.Text = question.Answer1;
-            answer2.Text = question.Answer2;
-            answer3.Text = question.Answer3;
-            answer4.Text = question.Answer4;
+            QuizService.GetNextQuestion();
+            DataBind();
+            ViewState["QuizService"] = QuizService;
         }
 
         protected void NextQuestionClicked(object sender, EventArgs e)
         {
-            _QuizService.AnswerQuestion(answer1.Checked, answer2.Checked, answer3.Checked, answer4.Checked);
+            QuizService.AnswerQuestion();
+            DataBind();
         }
     }
 }
