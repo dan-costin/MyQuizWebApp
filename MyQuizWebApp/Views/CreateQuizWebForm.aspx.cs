@@ -8,7 +8,7 @@ namespace MyQuiz.Views
 {
     public partial class CreateQuizWebForm : System.Web.UI.Page
     {
-        IQuizWrapper _QuizRepository;
+        IQuizRepository _QuizRepository;
         IUserRepository _UserRepository;
 
         private List<Question> _Questions;
@@ -32,7 +32,7 @@ namespace MyQuiz.Views
 
         public CreateQuizWebForm()
         {
-            _QuizRepository = ModelContainer.Resolve<IQuizWrapper>();
+            _QuizRepository = ModelContainer.Resolve<IQuizRepository>();
             _UserRepository = ModelContainer.Resolve<IUserRepository>();
             _Questions = new List<Question>();
         }

@@ -20,11 +20,9 @@ namespace MyQuiz.Repository
                 GetInstances();
                 _Instance.RegisterType<Logger.ILogger, Logger.Logger>(new HierarchicalLifetimeManager());
                 _Instance.RegisterType<IUserRepository, UserRepository>(new HierarchicalLifetimeManager());
-                _Instance.RegisterType<IQuizWrapper, QuizRepository>(new HierarchicalLifetimeManager());
+                _Instance.RegisterType<IQuizRepository, QuizRepository>(new HierarchicalLifetimeManager());
                 _Instance.RegisterType<IQuizService, QuizService>(new HierarchicalLifetimeManager());
                 _Instance.RegisterType<ILoginService, LoginService>(new HierarchicalLifetimeManager());
-                //_Instance.RegisterType<ISecurityRepository, SecurityRepository>(new HierarchicalLifetimeManager());
-                //_Instance.RegisterType<IMarketsAndNewsRepository, MarketsAndNewsRepository>(new HierarchicalLifetimeManager());
                 return _Instance;
             }
         }

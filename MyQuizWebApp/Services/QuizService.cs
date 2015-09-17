@@ -9,10 +9,8 @@ namespace MyQuiz.Services
     [Serializable]
     public class QuizService : IQuizService
     {
-        public Answers Answer { get; set; }
         public QuestionWrapper NextQuestion { get; set; }
 
-        //public IQuizWrapper QuizRepository { get; set; }
         QuestionWrapper _previousQuestion;
 
         Quiz _Quiz;
@@ -21,10 +19,9 @@ namespace MyQuiz.Services
 
         public QuizService()
         {
-            Answer = new Answers();
         }
 
-        public void SetQuiz(IQuizWrapper quizRepository, int quizId)
+        public void SetQuiz(IQuizRepository quizRepository, int quizId)
         {
             _Quiz = quizRepository.GetQuiz(quizId);
         }
@@ -44,12 +41,13 @@ namespace MyQuiz.Services
         public void AnswerQuestion()
         {
             Question question = GetItemAtIndex(_Quiz.Questions, questionIndex - 2);
-            if (question.IsAnswer1Correct == Answer.Answer1 &&
-                question.IsAnswer2Correct == Answer.Answer2 &&
-                question.IsAnswer3Correct == Answer.Answer3 &&
-                question.IsAnswer4Correct == Answer.Answer4)
+            if (question.IsAnswer1Correct == _previousQuestion.Answer.Answer1 &&
+                question.IsAnswer2Correct == _previousQuestion.Answer.Answer2 &&
+                question.IsAnswer3Correct == _previousQuestion.Answer.Answer3 &&
+                question.IsAnswer4Correct == _previousQuestion.Answer.Answer4)
+            {
                 points += 1;
-            Answer = new Answers();
+            }
         }
 
         private Question GetItemAtIndex(ICollection<Question> collection, int index)

@@ -6,12 +6,12 @@ namespace MyQuiz.Views
 {
     public partial class QuizWebForm : System.Web.UI.Page
     {
-        IQuizWrapper _QuizRepository;
+        IQuizRepository _QuizRepository;
         public IQuizService QuizService { get; set; }
 
         public QuizWebForm()
         {
-            _QuizRepository = ModelContainer.Resolve<IQuizWrapper>();
+            _QuizRepository = ModelContainer.Resolve<IQuizRepository>();
             QuizService = ModelContainer.Resolve<IQuizService>();
         }
 

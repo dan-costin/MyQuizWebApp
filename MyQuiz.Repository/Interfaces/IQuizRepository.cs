@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MyQuiz.Repository
 {
-    public interface IQuizWrapper
+    public interface IQuizRepository
     {
         void SaveQuiz(Quiz quiz);
         List<Quiz> GetAllQuizzes();
