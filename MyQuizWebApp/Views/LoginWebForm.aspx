@@ -17,7 +17,7 @@
                     <asp:Label Text="Username or Email" runat="server" />
                 </div>
                 <div class="defaultTextBoxStyle">
-                    <asp:TextBox ID="username" Width="90%" Height="20px" runat="server" Font-Names="Segoe UI" Font-Size="16px"/>
+                    <asp:TextBox ID="username" Width="90%" Height="20px" runat="server" Font-Names="Segoe UI" Font-Size="16px" />
                 </div>
 
                 <div class="defaultLabelStyle">

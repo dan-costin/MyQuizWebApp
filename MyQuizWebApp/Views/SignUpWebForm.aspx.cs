@@ -1,6 +1,6 @@
 ﻿using System;
-using MyQuiz.Repository;
 using MyQuiz.Services;
+using MyQuiz.Repository;
 
 namespace MyQuiz.Views
 {
@@ -32,6 +32,5 @@ namespace MyQuiz.Views
                 _LoginService.LoginUser(this.Request, this.Response, username.Text, password.Text);
             }
         }
-
     }
 }

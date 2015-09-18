@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Web;
-using MyQuiz.Repository;
 using MyQuiz.Services;
+using MyQuiz.Repository;
 
 namespace MyQuiz.Views
 {

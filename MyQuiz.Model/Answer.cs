@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace MyQuiz.Model
 {
     [Serializable]
-    [Table("Questions")]
-    public class Question
+    [Table("Answers")]
+    public class Answer
     {
-        public Question()
-        {
-            Answers = new HashSet<Answer>();
-        }
-
         [Key]
         public int ID { get; set; }
-        public string QuestionText { get; set; }
-        public ICollection<Answer> Answers { get; set; }
+        public string AnswerText { get; set; }
+        public bool IsAnswerCorrect { get; set; }
     }
 }

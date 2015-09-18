@@ -41,21 +41,38 @@ namespace MyQuiz.Services
         public void AnswerQuestion()
         {
             Question question = GetItemAtIndex(_Quiz.Questions, questionIndex - 2);
-            if (question.IsAnswer1Correct == _previousQuestion.Answer.Answer1 &&
-                question.IsAnswer2Correct == _previousQuestion.Answer.Answer2 &&
-                question.IsAnswer3Correct == _previousQuestion.Answer.Answer3 &&
-                question.IsAnswer4Correct == _previousQuestion.Answer.Answer4)
+            for (int i = 0; i < question.Answers.Count; i++)
             {
-                points += 1;
+                var quest = GetItemAtIndex(question.Answers, i);
             }
+
+            //if (question.IsAnswer1Correct == _previousQuestion.Answer.Answer1 &&
+            //    question.IsAnswer2Correct == _previousQuestion.Answer.Answer2 &&
+            //    question.IsAnswer3Correct == _previousQuestion.Answer.Answer3 &&
+            //    question.IsAnswer4Correct == _previousQuestion.Answer.Answer4)
+            //{
+            //    points += 1;
+            //}
         }
 
-        private Question GetItemAtIndex(ICollection<Question> collection, int index)
+        private Question GetItemAtIndex(ICollection<Question> questions, int questionIndex)
         {
             int collectionIndex = 0;
-            foreach (Question question in _Quiz.Questions)
+            foreach (var question in questions)
             {
-                if (index == collectionIndex)
+                if (questionIndex == collectionIndex)
+                    return question;
+                collectionIndex++;
+            }
+            return null;
+        }
+
+        private Answer GetItemAtIndex(ICollection<Answer> questions, int questionIndex)
+        {
+            int collectionIndex = 0;
+            foreach (var question in questions)
+            {
+                if (questionIndex == collectionIndex)
                     return question;
                 collectionIndex++;
             }

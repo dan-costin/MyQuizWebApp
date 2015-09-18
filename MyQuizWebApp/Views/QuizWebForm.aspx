@@ -16,7 +16,7 @@
 
         <br />
         <div style="width: 100%;">
-            <div style="width: 50%; display: inline; float: left;">
+            <div style="display: inline; float: left;">
                 <div class="quizCheckClass">
                     <asp:CheckBox Text="<%#QuizService.NextQuestion.Question.Answer1 %>" Checked="<%#QuizService.NextQuestion.Answer.Answer1 %>" ID="answer1" runat="server" CssClass="quizCheckClass" />
                 </div>
@@ -25,7 +25,7 @@
                     <asp:CheckBox Text="<%#QuizService.NextQuestion.Question.Answer2 %>" Checked="<%#QuizService.NextQuestion.Answer.Answer2 %>" ID="answer2" runat="server" CssClass="quizCheckClass" />
                 </div>
             </div>
-            <div style="width: 50%; display: inline; float: left;">
+            <div style="display: inline; float: left;">
                 <div class="quizCheckClass">
                     <asp:CheckBox Text="<%#QuizService.NextQuestion.Question.Answer3 %>" Checked="<%#QuizService.NextQuestion.Answer.Answer3 %>" ID="answer3" runat="server" />
                 </div>

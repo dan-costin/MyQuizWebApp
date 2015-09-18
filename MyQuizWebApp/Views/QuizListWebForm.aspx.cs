@@ -1,7 +1,7 @@
 ﻿using System;
-using MyQuiz.Repository;
-using Telerik.Web.UI;
 using MyQuiz.Model;
+using Telerik.Web.UI;
+using MyQuiz.Repository;
 
 namespace MyQuiz.Views
 {

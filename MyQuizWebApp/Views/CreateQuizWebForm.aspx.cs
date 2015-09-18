@@ -41,15 +41,10 @@ namespace MyQuiz.Views
         {
             Question newQuestion = new Question();
             newQuestion.QuestionText = question.Text;
-            newQuestion.Answer1 = answer1.Text;
-            newQuestion.Answer2 = answer2.Text;
-            newQuestion.Answer3 = answer3.Text;
-            newQuestion.Answer4 = answer4.Text;
-
-            newQuestion.IsAnswer1Correct = check1.Checked;
-            newQuestion.IsAnswer2Correct = check2.Checked;
-            newQuestion.IsAnswer3Correct = check3.Checked;
-            newQuestion.IsAnswer4Correct = check4.Checked;
+            Answer firstAnswer = new Answer() { AnswerText = answer1.Text, IsAnswerCorrect = check1.Checked };
+            Answer secondAnswer = new Answer() { AnswerText = answer2.Text, IsAnswerCorrect = check2.Checked };
+            Answer thirdAnswer = new Answer() { AnswerText = answer3.Text, IsAnswerCorrect = check3.Checked };
+            Answer fourthAnswer = new Answer() { AnswerText = answer4.Text, IsAnswerCorrect = check4.Checked };
 
             _Questions.Add(newQuestion);
             ViewState["Questions"] = _Questions;

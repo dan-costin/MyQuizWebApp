@@ -11,8 +11,13 @@
 <head runat="server">
     <title>My Quiz</title>
     <link href="../Styles/CommonStyleSheet.css" rel="stylesheet" />
+    <link href="../Styles/JQueryUI/jquery-ui.css" rel="stylesheet" />
+    <link href="../Styles/JQueryUI/jquery-ui.structure.css" rel="stylesheet" />
+    <link href="../Styles/JQueryUI/jquery-ui.theme.css" rel="stylesheet" />
     <script src="../Scripts/NavigationScripts.js"></script>
-    <script src="../Scripts/Libs/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/Libs/jquery-2.1.4.js"></script>
+    <script src="../Scripts/Libs/jquery-ui.js"></script>
+
     <asp:ContentPlaceHolder ID="header" runat="server" />
 </head>
 <body>
@@ -27,7 +32,7 @@
 
         <div id="loginMenuBaseStyle">
             <div id="loginMenuStyle">
-                <userControl:LoginUserControl runat="server" id="LoginUserControl"/>
+                <userControl:LoginUserControl runat="server" ID="LoginUserControl" />
             </div>
         </div>
 
@@ -39,7 +44,7 @@
 
         <div id="footerBaseStyle">
             <div id="footerStyle">
-                <userControl:FooterUserControl runat="server" id="FooterUserControl" />
+                <userControl:FooterUserControl runat="server" ID="FooterUserControl" />
             </div>
         </div>
     </div>

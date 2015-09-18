@@ -120,16 +120,37 @@
   <ItemGroup>
     <Content Include="Assets\error.bmp" />
     <Content Include="packages.config" />
-    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
-    <Content Include="Scripts\jquery-2.1.4.js" />
-    <Content Include="Scripts\jquery-2.1.4.min.js" />
-    <Content Include="Scripts\Libs\jquery-1.11.3.min.js" />
+    <None Include="Scripts\Libs\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\Libs\jquery-2.1.4.js" />
+    <Content Include="Scripts\Libs\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\Libs\jquery-ui.js" />
+    <Content Include="Scripts\Libs\jquery-ui.min.js" />
     <Content Include="Scripts\NavigationScripts.js" />
     <Content Include="Scripts\QuizListScript.js" />
     <Content Include="Styles\CommonButtonsStyleSheet.css" />
     <Content Include="Styles\CommonStyleSheet.css" />
     <Content Include="Styles\CreateQuizStyleSheet.css" />
     <Content Include="Styles\HeaderStyleSheet.css" />
+    <Content Include="Styles\JQueryUI\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Styles\JQueryUI\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Styles\JQueryUI\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Styles\JQueryUI\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Styles\JQueryUI\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Styles\JQueryUI\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\JQueryUI\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Styles\JQueryUI\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Styles\JQueryUI\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Styles\JQueryUI\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\JQueryUI\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Styles\JQueryUI\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Styles\JQueryUI\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Styles\JQueryUI\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\JQueryUI\jquery-ui.css" />
+    <Content Include="Styles\JQueryUI\jquery-ui.min.css" />
+    <Content Include="Styles\JQueryUI\jquery-ui.structure.css" />
+    <Content Include="Styles\JQueryUI\jquery-ui.structure.min.css" />
+    <Content Include="Styles\JQueryUI\jquery-ui.theme.css" />
+    <Content Include="Styles\JQueryUI\jquery-ui.theme.min.css" />
     <Content Include="Styles\ListViewStyleSheet.css" />
     <Content Include="Styles\QuizStyleSheet.css" />
     <Content Include="Styles\SignInStyleSheet.css" />
@@ -145,7 +166,7 @@
     <Content Include="Views\SignOutWebForm.aspx" />
     <Content Include="Views\SignUpWebForm.aspx" />
     <Content Include="Views\Site.Master" />
-    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Scripts\Libs\jquery-2.1.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
